@@ -1,0 +1,4 @@
+hello world
+this is a test
+of iterating over lines with a history
+python is fun
