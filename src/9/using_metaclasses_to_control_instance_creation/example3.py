@@ -10,9 +10,9 @@ class Cached(type):
         self.__cache = weakref.WeakValueDictionary()
 
     def __call__(self, *args):
-        if args in self.__cache:
+        try:
             return self.__cache[args]
-        else:
+        except KeyError:
             obj = super().__call__(*args)
             self.__cache[args] = obj
             return obj
