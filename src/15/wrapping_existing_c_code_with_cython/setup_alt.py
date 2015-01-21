@@ -7,6 +7,7 @@ ext_modules = [
               ["sample_alt.pyx"],
               include_dirs=['..'],
               libraries=['sample'],
+              runtime_library_dirs=['..'],
               library_dirs=['..'])]
 setup(
   name = 'Sample extension module',

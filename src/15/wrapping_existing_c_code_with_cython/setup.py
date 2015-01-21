@@ -7,7 +7,8 @@ ext_modules = [
               ["sample.pyx"],
               include_dirs=['..'],
               libraries=['sample'],
-              library_dirs=['..'])]
+              library_dirs=['..'],
+              runtime_library_dirs=['..'])]
 setup(
   name = 'Sample extension module',
   cmdclass = {'build_ext': build_ext},
