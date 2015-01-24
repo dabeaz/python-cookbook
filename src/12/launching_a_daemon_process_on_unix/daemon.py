@@ -81,10 +81,10 @@ if __name__ == '__main__':
         main()
 
     elif sys.argv[1] == 'stop':
-        if os.path.exists(PIDFILE):
+        try:
             with open(PIDFILE) as f:
                 os.kill(int(f.read()), signal.SIGTERM)
-        else:
+        except FileNotFoundError:
             print('Not running', file=sys.stderr)
             raise SystemExit(1)
 

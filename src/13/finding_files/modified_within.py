@@ -8,10 +8,12 @@ def modified_within(top, seconds):
     for path, dirs, files in os.walk(top):
         for name in files:
             fullpath = os.path.join(path, name)
-            if os.path.exists(fullpath):
+            try:  # Handle concurrent deletes.
                 mtime = os.path.getmtime(fullpath)
                 if mtime > (now - seconds):
                     print(fullpath)
+            except FileNotFoundError:
+                pass
             
 
 if __name__ == '__main__':
