@@ -14,7 +14,12 @@ b = {
    'y' : 2
 }
 
-print('Common keys:', a.keys() & b.keys())
-print('Keys in a not in b:', a.keys() - b.keys())
-print('(key,value) pairs in common:', a.items() & b.items())
+
+common_keys = list(set(a.keys()) & set(b.keys()))
+dic_keys = list(set(a.keys()) - set(b.keys()))
+common_key_pairs = list(set(a.items()) & set(b.items()))
+
+print('Common keys:', common_keys)
+print('Keys in a not in b:', dic_keys)
+print('(key,value) pairs in common:', common_key_pairs)
 
