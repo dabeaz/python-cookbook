@@ -1,7 +1,7 @@
-##python-cookbook 第三版
+## python-cookbook 第三版
 
 
-##目录
+## 目录
 - [第1章 数据结构和算法](Chapter1/)
 - [第2章  字符串和文本](Chapter2/)
 - 第3章  数字，日期和时间
@@ -21,5 +21,5 @@
 
 
 
-##注意
+## 注意
 代码使用Python3
