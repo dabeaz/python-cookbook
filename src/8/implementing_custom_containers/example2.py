@@ -2,7 +2,7 @@ import collections
 
 class Items(collections.MutableSequence):
     def __init__(self, initial=None):
-        self._items = list(initial) if initial is None else []
+        self._items = list(initial) if initial is not None else []
 
     # Required sequence methods
     def __getitem__(self, index):
