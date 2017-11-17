@@ -21,4 +21,4 @@ class Date:
 if __name__ == '__main__':
     date = Date(2017, 3, 20)
     for fmt in _formats:
-        print(format(date,fmt))
+        print(format(date, fmt), end=", ")
