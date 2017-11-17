@@ -1,4 +1,4 @@
-class lazyproperty:
+class LazyProperty:
     def __init__(self, func):
         self.func = func
     def __get__(self, instance, cls):
@@ -15,12 +15,12 @@ if __name__ == '__main__':
         def __init__(self, radius):
             self.radius = radius
 
-        @lazyproperty
+        @LazyProperty
         def area(self):
             print('Computing area')
             return math.pi * self.radius ** 2
 
-        @lazyproperty
+        @LazyProperty
         def perimeter(self):
             print('Computing perimeter')
             return 2 * math.pi * self.radius
