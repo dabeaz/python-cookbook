@@ -1,8 +1,9 @@
 _formats = {
-    'ymd' : '{d.year}-{d.month}-{d.day}',
-    'mdy' : '{d.month}/{d.day}/{d.year}',
-    'dmy' : '{d.day}/{d.month}/{d.year}'
-    }
+    'ymd': '{d.year}-{d.month}-{d.day}',
+    'mdy': '{d.month}/{d.day}/{d.year}',
+    'dmy': '{d.day}/{d.month}/{d.year}'
+}
+
 
 class Date:
     def __init__(self, year, month, day):
@@ -16,4 +17,8 @@ class Date:
         fmt = _formats[code]
         return fmt.format(d=self)
 
-        
+
+if __name__ == '__main__':
+    date = Date(2017, 3, 20)
+    for fmt in _formats:
+        print(format(date,fmt))
