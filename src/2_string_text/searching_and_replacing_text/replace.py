@@ -15,8 +15,19 @@ print(datepat.sub(r'\3-\1-\2', text))
 # (b) Replacement function
 from calendar import month_abbr
 
+
 def change_date(m):
+    # month_abbr: Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec
     mon_name = month_abbr[int(m.group(1))]
     return '{} {} {}'.format(m.group(2), mon_name, m.group(3))
 
-print(datepat.sub(change_date, text))
+
+print("replaced date string:", datepat.sub(change_date, text))
+
+
+def show_month_abbr():
+    for i in range(13):
+        print(month_abbr[i])
+
+
+show_month_abbr()
