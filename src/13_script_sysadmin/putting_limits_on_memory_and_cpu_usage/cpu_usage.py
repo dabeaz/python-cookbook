@@ -1,6 +1,6 @@
-import signal
 import resource
-import os
+import signal
+
 
 def time_exceeded(signo, frame):
     print("Time's up!")

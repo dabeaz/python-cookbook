@@ -16,7 +16,7 @@ def example2():
     try:
         int('N/A')
     except ValueError as e:
-        print('It failed. Reason:', err)   # Intentional error
+        print('It failed. Reason:', e)   # Intentional error
 
 # Example 3: Discarding the previous exception
 def example3():
