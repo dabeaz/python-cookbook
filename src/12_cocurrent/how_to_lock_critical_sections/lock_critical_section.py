@@ -9,9 +9,7 @@ class SharedCounter:
         self._value_lock = threading.Lock()
 
     def incr(self,delta=1):
-        '''
-	Increment the counter with locking
-	'''
+        """Increment the counter with locking"""
         with self._value_lock:
              self._value += delta
 
