@@ -6,13 +6,13 @@
 # (a) Reading a basic text file (UTF-8 default encoding)
 
 print("Reading a simple text file (UTF-8)")
-with open('sample.txt', 'rt') as f:
+with open('sample.txt', 'rt', encoding="UTF-8") as f:
     for line in f:
         print(repr(line))
 
 # (b) Reading a text file with universal newlines turned off
 print("Reading text file with universal newlines off")
-with open('sample.txt', 'rt', newline='') as f:
+with open('sample.txt', 'rt', newline='', encoding="UTF-8") as f:
     for line in f:
         print(repr(line))
 
@@ -27,4 +27,3 @@ print("Reading text as ASCII with ignore error handling")
 with open('sample.txt', 'rt', encoding='ascii', errors='ignore') as f:
     for line in f:
         print(repr(line))
-
