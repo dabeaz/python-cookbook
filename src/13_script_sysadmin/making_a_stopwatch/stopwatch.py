@@ -1,5 +1,6 @@
 import time
 
+
 class Timer:
     def __init__(self, func=time.perf_counter):
         self.elapsed = 0.0
@@ -10,7 +11,7 @@ class Timer:
         if self._start is not None:
             raise RuntimeError('Already started')
         self._start = self._func()
-        
+
     def end(self):
         if self._start is None:
             raise RuntimeError('Not started')
@@ -34,17 +35,21 @@ class Timer:
 
 
 if __name__ == '__main__':
+
     def countdown(n):
         while n > 0:
             n -= 1
 
+    # (a) traditional way: elapsed = end - start
+    print("(a) traditional way: elapsed = end - start")
     t = Timer()
     t.start()
-    countdown(1000000)
+    countdown(20000000)
     t.end()
     print(t.elapsed)
 
+    # (b) context manager
+    print("(b) context manager")
     with t:
-        countdown(1000000)
+        countdown(20000000)
     print(t.elapsed)
-
