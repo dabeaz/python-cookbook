@@ -1,4 +1,25 @@
-python-cookbook
-===============
+## python-cookbook 第三版
 
-Code samples from the "Python Cookbook, 3rd Edition", published by O'Reilly &amp; Associates, May, 2013. 
+
+## 目录
+- [第1章 数据结构和算法](Chapter1/)
+- [第2章  字符串和文本](Chapter2/)
+- 第3章  数字，日期和时间
+- 第4章  迭代器和生成器
+- 第5章  文件和I/O
+- 第6章  数据编码与处理
+- 第7章  函数
+- 第8章  类与对象
+- 第9章  元编程
+- 第10章 模块与包
+- 第11章 网络和Web编程
+- 第12章 并发
+- 第13章 实用脚本和系统管理
+- 第14章 测试，调试以及异常
+- 第15章 C语言扩展
+
+
+
+
+## 注意
+代码使用Python3
