@@ -1,5 +1,7 @@
 # Example of using partial() with sorting a list of (x,y) coordinates
 
+import functools
+
 points = [ (1, 2), (3, 4), (5, 6), (7, 7) ]
 
 import math
@@ -9,5 +11,5 @@ def distance(p1, p2):
     return math.hypot(x2 - x1, y2 - y1)
 
 pt = (4,3)
-points.sort(key=partial(distance, pt))
+points.sort(key=functools.partial(distance, pt))
 print(points)
