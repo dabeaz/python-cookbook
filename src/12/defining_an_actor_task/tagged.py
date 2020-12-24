@@ -6,7 +6,7 @@ class TaggedActor(Actor):
              tag, *payload = self.recv()
              getattr(self,"do_"+tag)(*payload)
     
-    # Methods correponding to different message tags
+    # Methods corresponding to different message tags
     def do_A(self, x):
         print("Running A", x)
 
