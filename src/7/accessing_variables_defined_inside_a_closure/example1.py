@@ -1,28 +1,20 @@
 # Example of accessing variables inside a closure
+class Sample:
+    def __init__(self):
+        self._n = 0
 
-def sample():
-    n = 0           
-    # Closure function
-    def func():
-        print('n=', n)
-    
-    # Accessor methods for n
-    def get_n():
-        return n
+    def func(self):
+        print(f'n={self._n}')
 
-    def set_n(value):
-        nonlocal n
-        n = value
+    def get_n(self):
+        return self._n
 
-    # Attach as function attributes
-    func.get_n = get_n
-    func.set_n = set_n
-    return func
+    def set_n(self, value):
+        self._n = value
 
 if __name__ == '__main__':
-    f = sample()
-    f()
-    n= 0
-    f.set_n(10)
-    f()
-    print(f.get_n())
+    s = Sample()
+    s.func()
+    s.set_n(10)
+    s.func()
+    print(s.get_n())
